@@ -11,7 +11,7 @@ const Authenticate = async (req, res, next) => {
       _id: verfiyToken._id,
       "tokens.token": token,
     });
-    if (!rootUser) {
+    if (!rootUser) {   
       throw new Error("user not find");
     }
     req.token = token;
